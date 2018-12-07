@@ -1,5 +1,6 @@
 import React from "react"
-import { Button, View, Text, Image, ImageBackground } from "react-native"
+import { View, Text, Image, ImageBackground } from "react-native";
+import { Button } from 'react-native-elements';
 import { createStackNavigator, createAppContainer } from "react-navigation" // Version can be specified in package.json
 import Snow from "react-native-snow";
 
@@ -8,15 +9,26 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
+        <ImageBackground style={{ alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }} source={{ uri: "https://i.pinimg.com/236x/06/d2/cf/06d2cf424f7b494d0328ce1728f0ba61--fire-art-fire-and-ice.jpg" }}>
+        <Text style={{fontSize:80, color:'white', backgroundColor:'rgba(0, 0, 0, 0.3)'}}>Are You</Text>
+        <Text></Text>
+        
         <Button
+          backgroundColor='blue'
+          color='white'
           title="Cold"
           onPress={() => this.props.navigation.navigate("Cold")}
         />
+        <Text style={{fontSize:60, color:'white'}}>or</Text>
         <Button
+          backgroundColor='red'
+          color= 'black'
           title="Hot"
           onPress={() => this.props.navigation.navigate("Hot")}
         />
+        <Text style={{fontSize:60, color:'white'}}>?</Text>
+        </ImageBackground>
+        
       </View>
     )
   }
@@ -26,9 +38,8 @@ class FrostyScreen extends React.Component {
   render() {
     return <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <ImageBackground style={{ alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }} source={{ uri: "http://www.algonquinadventures.com/wallpaper/phones/StephenElms-SPWP-2.jpg" }}>
-          {/* <AnimatedSnow style={styles.snow} /> */}
-        </ImageBackground>
-        <Snow />
+      </ImageBackground>
+      <Snow />
       </View>;
   }
 }
