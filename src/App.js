@@ -1,7 +1,8 @@
 import React from "react"
 import { Button, View, Text, Image, ImageBackground } from "react-native"
 import { createStackNavigator, createAppContainer } from "react-navigation" // Version can be specified in package.json
-import AnimatedSnow from "./AnimatedSnow"
+import Snow from "react-native-snow";
+
 
 class HomeScreen extends React.Component {
   render() {
@@ -23,36 +24,25 @@ class HomeScreen extends React.Component {
 
 class FrostyScreen extends React.Component {
   render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <ImageBackground
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            height: "100%"
-          }}
-          source={{
-            uri:
-              "https://www.hdiphonewalls.com/wp-content/uploads/iPhoneX/Nature/Static%20snow%20iPhone%20X%20Wallpapers.jpg"
-          }}
-        >
-          <AnimatedSnow style={styles.snow} />
+    return <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ImageBackground style={{ alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }} source={{ uri: "http://www.algonquinadventures.com/wallpaper/phones/StephenElms-SPWP-2.jpg" }}>
+          {/* <AnimatedSnow style={styles.snow} /> */}
         </ImageBackground>
-      </View>
-    )
+        <Snow />
+      </View>;
   }
 }
 
 class FireyScreen extends React.Component {
   render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>You are cold</Text>
+    return <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ImageBackground style={{ alignItems: "center", width: "100%", height: "100%" }} source={{ uri: "https://i.pinimg.com/originals/62/7d/79/627d791dd52df9227cecf798494946dd.jpg" }}>
+        <Image layout={10,10,10,10} style = {{ width:'20%', height:'20%', marginTop:'106%'}} source={require('../img/fire.gif')}>
+        </Image>        
+      </ImageBackground>
 
         {/* Look here! We "push" the Details route */}
-      </View>
-    )
+      </View>;
   }
 }
 
