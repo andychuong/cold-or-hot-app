@@ -40,6 +40,7 @@ class FrostyScreen extends React.Component {
       <ImageBackground style={{ alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }} source={{ uri: "http://www.algonquinadventures.com/wallpaper/phones/StephenElms-SPWP-2.jpg" }}>
       </ImageBackground>
       <Snow />
+
       </View>;
   }
 }
