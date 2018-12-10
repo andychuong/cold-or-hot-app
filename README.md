@@ -1,1 +1,3 @@
-# react-native-hackathon
+# Hot or Cold Mobile App
+
+
