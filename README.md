@@ -1,3 +1,3 @@
-# Hot or Cold Mobile App
+# Cold or Hot Mobile App
 
 
